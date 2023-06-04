@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<header>
+   <h1>Survey Service</h1> 
+</header>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            animation: gradientMovement 10s linear infinite;
+        }
+
+        @keyframes gradientMovement {
+            0% {
+                background: linear-gradient(to right,lightblue, lightyellow);
+            }
+            50% {
+                background: linear-gradient(to right, lightblue, lightpink);
+            }
+            100% {
+                background: linear-gradient(to right, lightblue, #F8CDF8);
+            }
+        }
+    </style>
+</head>
+
+<nav>
+        <a href="home.htm">Home</a>
+        <a href="takesurvey.htm">Take survey</a>
+        <a href="aboutus.htm">About us</a>
+</nav>
+
+<article>
+    <h2><b>Survey</b></h2>
+    <p>A survey is often used in a research project to collect feedback from users of a system or participants of an event. Results of the evaluation will be of interest to the researcher(s) to help them determine whether the approach is likely to affect the objectives set in the research.</p>
+    <h2><b>Voluntary Participation</b></h2>
+    <p>Participation in surveys is voluntary. You may discontinue participation at any time during the research activity and, on request, will delete data collected from you (until publication, at which point deletion is no longer possible).</p>
+</article>
+
+<aside>
+    <p>Census and Survey Processing System (CSPro) is a public domain statistical package developed by the U.S. Census Bureau and ICF International.</p>
+    <img src="CSPro_Logo.png" alt="CSPro" width="300" height="300">
+    <p>Epi Info is public domain statistical software for epidemiology developed by Centers for Disease Control and Prevention (CDC) in Atlanta, Georgia, U.S.A.</p>
+    <img src="unnamed.png" alt="Epi Info" width="300" height="300">
+</aside>
+
+<footer>
+    <p><i>Copyright 2016, Survey Service System.</i></p>
+</footer>
+
+
+<style>
+    header{
+        border-style:dashed;
+        text-align: center;
+        border-color: white;
+        background-color: lightblue;
+    }
+
+    image {
+        width: 300px;
+        height: 200px;
+    }
+
+
+    nav{
+        flex-direction: row;
+        text-align: center;
+        }
+
+    article {
+        float: left;
+        width: 65%;
+        border-style:dashed;
+        border-color: white;
+        background-color: wheat;
+        padding-left: 10px;
+        margin-bottom: 20px; /* Add margin between borders */
+        padding: 10px; /* Add padding within borders */
+    }
+
+    aside{
+        float: right;
+        width:30%;
+        border-style:dashed;
+        border-color: white;
+        background-color: wheat;
+        padding-left: 10px;
+    }
+
+    footer {
+    clear: both;
+    width:40%;
+    height: 40%;
+}
+</style>
