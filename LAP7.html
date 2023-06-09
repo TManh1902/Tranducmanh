@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />	
+	<meta name="description" content="Web development" />
+	<meta name="keywords"    content="Registration Form" />
+	<meta name="author"      content="put your name here" />
+    <link rel="stylesheet" href="./LAP7.css"/>
+	<title>Web Development Registration Form</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+</head>
+<body>
+	<main>
+
+
+	<!-- Registration Form -->
+	<h1>Sign Up</h1>
+	<form method="post"
+				action="http://mercury.ict.swin.edu.au/it000000/formtest.php">
+		<h2 class="user-infor">Account Information</h2>
+		<p class="account-input "><label>User ID</label>
+				<input id="user" type="text" name="uid" />
+				<span id="sidTip">Student ID</span>
+		</p>
+		<p class="account-input"><label>Password</label>
+				<input type="password" name="pwd1" id="password"/>
+		</p>
+		<p class="account-input">	<label>Retype Password</label>
+				<input type="password" name="pwd2" />
+		</p>
+
+		<h2 class="user-infor">User Information</h2>
+		<p>	<label>Name</label>
+				<input type="text" name="username" />
+		</p>
+		<div class="radio-check">
+				<div class="check1">
+					<label>Male</label>
+					<input type="radio" name="gender" value="M" />
+				</div>
+				<div class="check2">
+					<label>Female</label>
+					<input type="radio" name="gender" value="F" />
+				</div>
+		</div>
+		<div class="sub-button"><input class="button-34" type="submit" value="Register" />
+		</div>
+	</form>
+</main>
+<script src="./LAP7.js" ></script>
+</body>
+</html>
