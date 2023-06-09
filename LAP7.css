@@ -1,0 +1,276 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Styles for mobile */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Styles for mobile */
+body {
+    padding-top: 70px;
+    color: black; /* Change to your desired text color */
+    background-image:url("BG.jpg")
+}
+
+form {
+    background-image:linear-gradient(to right, white,   rgba(88,37,123,1));
+    width: 60%;
+    margin-top: 20px;
+    font-size: 100%;
+    padding: 25px;
+    border: .5px solid white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+h1 {
+    font-size: 50px;
+    align-items: center;
+    padding-top: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+}
+
+input {
+    padding-left: 2px;
+    border: 1px solid white;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.account-input {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+.sub-button {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radio-check {
+    display: flex;
+    gap: 20px;
+}
+
+.check1 {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.check1 input {
+    margin-top: 5px;
+}
+
+.check2 input {
+    margin-top: 5px;
+}
+
+.check2 {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* CSS */
+.button-34 {
+    width: 150px;
+    height: 45px;
+    background: #4F709C;
+    border-radius: 999px;
+    box-shadow: #4F709C 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    left: 55%;
+    top: 28%;
+    height: 25px;
+    background-color: #FF00FF; /* Change to your desired tooltip background color */
+    padding: 10px;
+    border-radius: 10px;
+    color: #FF00FF; /* Change to your desired tooltip text color */
+}
+
+#togglePassword {
+    margin-top: 5px;
+    width: 90px;
+    height: 30px;
+    background-color: #00FF00; /* Change to your desired toggle button background color */
+    color: #FFFFFF; /* Change to your desired toggle button text color */
+    border-radius: 10px;
+}
+
+
+form {
+    background-color: #F5EFE7;
+    width: 60%;
+    margin-top: 20px;
+    font-size: 100%;
+    padding: 25px;
+    border: .5px solid white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+h1 {
+    font-size: 50px;
+    align-items: center;
+    padding-top: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+}
+
+input {
+    padding-left: 2px;
+    border: 1px solid white;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.account-input {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+.sub-button {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radio-check {
+    display: flex;
+    gap: 20px;
+}
+
+.check1 {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.check1 input {
+    margin-top: 5px;
+}
+
+.check2 input {
+    margin-top: 5px;
+}
+
+.check2 {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* CSS */
+.button-34 {
+    width: 150px;
+    height: 45px;
+    background: #4F709C;
+    border-radius: 999px;
+    box-shadow: #4F709C 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    left: 55%;
+    top: 28%;
+    height: 25px;
+    background-color: #FF00FF; /* Change to your desired tooltip background color */
+    padding: 10px;
+    border-radius: 10px;
+    color: #FF00FF; /* Change to your desired tooltip text color */
+}
+
+#togglePassword {
+    margin-top: 5px;
+    width: 90px;
+    height: 30px;
+    background-color: #00FF00; /* Change to your desired toggle button background color */
+    color: #FFFFFF; /* Change to your desired toggle button text color */
+    border-radius: 10px;
+}
