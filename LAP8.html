@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register Form</title>
+  <style>
+    .error {
+      color: red;
+    }
+    
+    #passwordRuleWindow {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 250px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+    
+    #passwordRuleWindow h3 {
+      margin-top: 0;
+    }
+
+    body{
+      background: linear-gradient(to right, lightblue, lightyellow);
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Register Form</h1>
+  <form id="registerForm" onsubmit="validateForm(event)">
+    <p>Account Information</p>
+    <label for="userid">User ID:</label>
+    <input type="text" id="userid" required><br><br>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" required><br><br>
+    
+    <label for="retypePassword">Retype Password:</label>
+    <input type="password" id="retypePassword" required>
+    <button type="button" onclick="showPasswordRule()">Password Rule</button><br><br>
+    
+    <p>User Information</p>
+    <label for="username">User Name:</label>
+    <input type="text" id="username" required><br><br>
+    
+    <label for="gender">Gender:</label>
+    <label><input type="radio" name="gender" value="male">Male</label>
+    <label><input type="radio" name="gender" value="female">Female</label><br>
+    
+    <button type="submit">Test-Register</button><br>
+  </form>
+  
+  <div id="passwordRuleWindow">
+    <h3>Password Rule:</h3>
+    <p>Password must satisfy the following</p>
+    <li>must be 8 characters long</li>
+    <li>must contain at least 1 number</li>
+    <li>must contain both upper and lower case letters</li>
+    <button onclick="closePasswordRule()">Close
+  </div>
+  
+  <script>
+    function validateForm(event) {
+      event.preventDefault();
+      
+      const userid = document.getElementById("userid").value;
+      const password = document.getElementById("password").value;
+      const retypePassword = document.getElementById("retypePassword").value;
+      const username = document.getElementById("username").value;
+      const gender = document.querySelector('input[name="gender"]:checked');
+      
+      // Password validation
+      const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+      
+      if (password !== retypePassword) {
+        alert("Passwords do not match.");
+        return;
+      }
+      
+      if (!passwordRegex.test(password)) {
+        alert("Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, and one digit.");
+        return;
+      }
+      
+      // All inputs are valid, you can proceed with form submission or further processing
+      alert("Registration successful!");
+      
+      // Clear form fields
+      document.getElementById("registerForm").reset();
+    }
+    
+    function showPasswordRule() {
+      const passwordRuleWindow = document.getElementById("passwordRuleWindow");
+      passwordRuleWindow.style.display = "block";
+      
+      const retypePasswordInput = document.getElementById("retypePassword");
+      const rect = retypePasswordInput.getBoundingClientRect();
+      
+      passwordRuleWindow.style.top = `${rect.top}px`;
+      passwordRuleWindow.style.left = `${rect.right}px`;
+    }
+    
+    function closePasswordRule() {
+      const passwordRuleWindow = document.getElementById("passwordRuleWindow");
+      passwordRuleWindow.style.display = "none";
+    }
+  </script>
+</body>
+</html>
