@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+        }
+
+        .container {
+            width: 400px;
+            background-color: lightblue;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h1 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="password"],
+        .form-group input[type="radio"] {
+            width: 100%;
+            padding: 8px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+
+        .error {
+            color: red;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Register Form</h1>
+        <form id="registerForm" onsubmit="validateForm(event)">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Test-Register">
+            </div>
+        </form>
+
+        <div id="errorMessage" class="error"></div>
+    </div>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+
+            var errorMessage = '';
+
+            // Validate name
+            if (!/^[A-Za-z\s]+$/.test(name)) {
+                errorMessage += 'Name must contain letters and spaces only.<br>';
+            }
+
+            // Validate email
+            if (!email.includes('@')) {
+                errorMessage += 'Email must contain at least one "@" symbol.<br>';
+            }
+
+            // Validate password
+            if (password.length < 8) {
+                errorMessage += 'Password must be at least 8 characters long.<br>';
+            }
+
+            // Validate confirm password
+            if (password !== confirmPassword) {
+                errorMessage += 'Passwords do not match.<br>';
+            }
+
+            // Validate gender
+            if (!gender) {
+                errorMessage += 'Please select a gender.<br>';
+            }
+
+            // Display error message if any
+            var errorContainer = document.getElementById('errorMessage');
+            if (errorMessage !== '') {
+                errorContainer.innerHTML = errorMessage;
+            } else {
+                errorContainer.innerHTML = ''; // Clear previous error message
+                // Submit the form if validation passes
+                document.getElementById('registerForm').submit();
+            }
+        }
+    </script>
+</body>
+</html>
