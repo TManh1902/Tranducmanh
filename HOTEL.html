@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RESERVATION FORM</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url("sea-background-texture-1466765405Ve8.jpg");
+            font-family: Arial, sans-serif;
+            color: whitesmoke
+        }
+
+        .form-container {
+            max-width: 300px;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+             width: 400px;
+             height: 500px;
+             padding: 40px;
+
+            border: 1px solid rgba(255, 255, 255, 0.792);
+             border-radius: 20px;
+            background-color (255, 255, 255, 0.4);
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+
+            backdrop-filter: blur(15px);
+            transform: translateY(-20px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            
+        }
+
+        .form-container.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="tel"],
+        .form-container input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: white;
+        }
+    </style>
+    <script>
+        function showForm() {
+            var formContainer = document.querySelector('.form-container');
+            formContainer.classList.add('show');
+        }
+
+        function validateForm() {
+            var firstName = document.forms["reservationForm"]["firstName"].value;
+            var lastName = document.forms["reservationForm"]["lastName"].value;
+            var email = document.forms["reservationForm"]["email"].value;
+            var phoneNumber = document.forms["reservationForm"]["phoneNumber"].value;
+            var departureDate = document.forms["reservationForm"]["departureDate"].value;
+            var returnDate = document.forms["reservationForm"]["returnDate"].value;
+
+            if (firstName === "" || lastName === "" || email === "" || phoneNumber === "" || departureDate === "" || returnDate === "") {
+                alert("Please fill in all the required fields.");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body onload="showForm()">
+    <div class="form-container">
+        <h2>RESERVATION FORM</h2>
+        <form name="reservationForm" onsubmit="return validateForm()" method="post">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+
+            <label for="departureDate">Departure Date:</label>
+            <input type="date" id="departureDate" name="departureDate" required>
+
+            <label for="returnDate">Return Date:</label>
+            <input type="date" id="returnDate" name="returnDate" required>
+
+            <input type="submit" value="Submit Reservation">
+        </form>
+    </div>
+</body>
+</html>
